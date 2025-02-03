@@ -1,0 +1,6 @@
+package alaska
+
+templ ClientComponent(id string, data interface{}) {
+	<slot id={ id }></slot>
+	@templ.JSONScript(id, data)
+}

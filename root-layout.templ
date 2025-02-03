@@ -1,13 +1,15 @@
 package alaska
 
-templ RootLayout() {
+templ RootLayout(head templ.Component) {
 	<html>
-		<head></head>
+		<head>
+			@head
+		</head>
 		<body>
 			<main>
 				{ children... }
 			</main>
-			<script src="static/internal/client.js" type="module" defer></script>
+			<script src="static/entrypoint.js" type="module" defer></script>
 		</body>
 	</html>
 }
