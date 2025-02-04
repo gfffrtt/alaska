@@ -24,5 +24,5 @@ func (s *StdHttpServer) Post(path string, handler func(http.ResponseWriter, *htt
 }
 
 func (s *StdHttpServer) Static() {
-	s.App.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	s.App.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("build"))))
 }
