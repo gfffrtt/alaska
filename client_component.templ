@@ -3,7 +3,7 @@ package alaska
 import "fmt"
 
 templ ClientComponent(id string, data interface{}) {
-	<slot id={ id }></slot>
+	<div id={ id }></div>
 	@templ.JSONScript(id, data)
-	<script src={ fmt.Sprintf("static/%s.js", id) } type="module"></script>
+	<script src={ fmt.Sprintf("static/%s.js", id) }></script>
 }
