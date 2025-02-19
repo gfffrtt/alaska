@@ -5,5 +5,5 @@ import "fmt"
 templ ClientComponent(id string, data interface{}) {
 	<div id={ id }></div>
 	@templ.JSONScript(id, data)
-	<script data-client-component="true" src={ fmt.Sprintf("static/%s.js", id) } type="module"></script>
+	<script src={ fmt.Sprintf("static/%s.js", id) } type="module"></script>
 }
